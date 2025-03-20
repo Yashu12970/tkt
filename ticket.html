@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBook</title>
+</head>
+<body>
+    <h1>WELCOME TO QUICKBOOK</h1>
+    <form id="form1" onsubmit="return nextPage()">
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" required><br><br>
+        
+        <label for="location">Enter Your Location:</label>
+        <input type="text" id="location" required><br><br
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>QuickBook - Step 2</title>
+        </head>
+        <body>
+            <h1>Welcome, <span id="userName"></span></h1>
+            <h3>Enter Your Destination and Choose Your Transport</h3>
+            
+            <form id="form2" onsubmit="return calculateCost()">
+                <label for="destination">Enter Your Destiny:</label>
+                <input type="text" id="destination" required><br><br>
+        
+                <label for="vehicle">Choose Transport Vehicle:</label>
+                <select id="vehicle" required>
+                    <option value="bus">Bus</option>
+                    <option value="train">Train</option>
+                    <option value="aeroplane">Aeroplane</option>
+                </select><br><br>
+                
+                <label for="distance">Enter How Much Distance (in km):</label>
+                <input type="number" id="distance" required><br><br>
+                
+                <button type="submit">Calculate Cost</button>
+            </form>
+        
+            <h2>Cost: <span id="cost"></span></h2>
+            
+            <h3 id="thankYouMessage"></h3>
+        
+            <script>
+                // Display user's name from localStorage
+                document.getElementById('userName').textContent = localStorage.getItem('name');
+                
+                function calculateCost() {
+                    const vehicle = document.getElementById('vehicle').value;
+                    const distance = parseFloat(document.getElementById('distance').value);
+                    let cost = 0;
+        
+                    // Calculate cost based on the vehicle chosen
+                    if(vehicle === 'bus') {
+                        cost = (distance / 10) * 25;
+                    } else if(vehicle === 'train') {
+                        cost = (distance / 10) * 15;
+                    } else if(vehicle === 'aeroplane') {
+                        cost = (distance / 10) * 200;
+                    }
+        
+                    // Display the cost
+                    document.getElementById('cost').textContent = cost + " Rupes";
+        
+                    // Display Thank You message
+                    document.getElementById('thankYouMessage').textContent = "Please BOOK your ticket. Thank you!";
+                    
+                    return false; // Prevent form submission
+                }
+            </script>
+        </body>
+        </html>
+        
