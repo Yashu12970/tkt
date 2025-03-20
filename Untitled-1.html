@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bawarchi Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bawarchi Restaurant Menu</h1>
+        <p>Delicious Food, Amazing Prices!</p>
+    </header>
+
+    <section id="menu">
+        <h2>Menu Items</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price (INR)</th>
+                <th>Discount</th>
+                <th>Final Price (INR)</th>
+            </tr>
+            <tr>
+                <td>Chicken Biryani</td>
+                <td id="chickenBiryaniPrice">250</td>
+                <td id="chickenBiryaniDiscount">10%</td>
+                <td id="chickenBiryaniFinalPrice"></td>
+            </tr>
+            <tr>
+                <td>Gulab Jamun</td>
+                <td id="gulabJamunPrice">80</td>
+                <td id="gulabJamunDiscount">10%</td>
+                <td id="gulabJamunFinalPrice"></td>
+            </tr>
+            <tr>
+                <td>Appolo Fish</td>
+                <td id="appoloFishPrice">400</td>
+                <td id="appoloFishDiscount">10%</td>
+                <td id="appoloFishFinalPrice"></td>
+            </tr>
+            <tr>
+                <td>Kima Mutton</td>
+                <td id="kimaMuttonPrice">550</td>
+                <td id="kimaMuttonDiscount">10%</td>
+                <td id="kimaMuttonFinalPrice"></td>
+            </tr>
+            <tr>
+                <td>Prawn Fried Rice</td>
+                <td id="prawnFriedRicePrice">210</td>
+                <td id="prawnFriedRiceDiscount">10%</td>
+                <td id="prawnFriedRiceFinalPrice"></td>
+            </tr>
+        </table>
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <p id="totalCost"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bawarchi Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
